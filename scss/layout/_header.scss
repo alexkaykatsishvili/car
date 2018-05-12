@@ -1,0 +1,202 @@
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+
+// header{
+// 	background:#f0f0f0 url(../img/bg_header.jpg) no-repeat left top;
+// 	width:100%; height: 80px;
+// 	min-width: $min-width;
+// 	text-align:left;	
+// 	order: 1;	
+//     -webkit-order: 1;	
+// }
+
+
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {}
+.wrapper {
+	    border-bottom: 2px solid #a3a4a6;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1172px;
+    margin: 0 auto 5px;
+    .logo {
+        a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        span {
+            color: #454545;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 20px;
+            margin-left: 16px;
+        }
+    }
+    .navigbar {
+    	margin-left: 40px;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style-type: none;
+                display: inline-block;
+                margin-left: 35px;
+                &:first-child {
+                	margin-left: 0;
+                }
+                a {
+                    text-decoration: none;
+                    padding: 39px 0;
+                    border-bottom: 4px solid transparent;
+                    font-family: 'Open Sans', sans-serif;
+                    color: rgba(69, 69, 69, 0.870588);
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    &:hover {
+                        border-bottom: 4px solid #b61e24;
+                        transition: .1s ease-in;
+                    }
+                }
+            }
+        }
+    }
+    .enter {
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            img {
+                border-bottom: 2px solid transparent;
+                padding-bottom: 3px;
+            }
+            span {
+                display: inline-block;
+                font-family: 'Open Sans', sans-serif;
+                color: rgba(69, 69, 69, 0.870588);
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 14px;
+                text-align: center;
+                padding-left: 8px;
+                letter-spacing: 0.08em;
+                border-bottom: 2px solid transparent;
+            }
+            &:hover {
+            	img {
+            		border-bottom: 2px solid #b61e24;
+            		transition: .1s ease-in;
+            	}
+            	
+            }
+        }
+    }
+    .social {
+    	margin-left: 68px;
+    	a {
+    		margin-left: 5px;
+    		img {
+    			opacity: .74;
+    		}
+    		&:hover {
+    			img {
+    				opacity: 1;
+    			}
+    		}
+    	}
+    }
+}
+
+body {
+    transition: background-color .5s;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #232323;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Open Sans', sans-serif;
+                color: rgba(69, 69, 69, 0.870588);
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .openbtn {
+        display: block;
+    }
+    .header {
+        display: none;
+    }
+}
