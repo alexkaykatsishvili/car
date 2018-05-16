@@ -86,7 +86,7 @@ input[type=submit], input[type=button], button { -webkit-appearance: none; outli
 
 body { -webkit-transition: background-color .5s; transition: background-color .5s; }
 
-.sidenav { height: 100%; width: 0; position: fixed; z-index: 1; top: 0; left: 0; background-color: #232323; overflow-x: hidden; -webkit-transition: 0.5s; transition: 0.5s; padding-top: 60px; }
+.sidenav { height: 100%; width: 0; position: fixed; z-index: 100; top: 0; left: 0; background-color: #232323; overflow-x: hidden; -webkit-transition: 0.5s; transition: 0.5s; padding-top: 60px; }
 
 .sidenav a { padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; -webkit-transition: 0.3s; transition: 0.3s; font-family: 'Open Sans', sans-serif; color: rgba(69, 69, 69, 0.870588); }
 
@@ -96,7 +96,7 @@ body { -webkit-transition: background-color .5s; transition: background-color .5
 
 #main { -webkit-transition: margin-left .5s; transition: margin-left .5s; padding: 16px; }
 
-.openbtn { font-size: 30px; cursor: pointer; display: none; }
+.openbtn { font-size: 30px; cursor: pointer; display: none; color: #454545; margin: 4px 0 3px 10px; }
 
 @media screen and (max-height: 450px) { .sidenav { padding-top: 15px; }
   .sidenav a { font-size: 18px; } }
@@ -147,9 +147,6 @@ footer { height: 120px; background-color: #232323; }
   .footer .menu { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
   footer { height: 240px; background-color: #232323; } }
 
-/* titles */
-/* text position */
-/* loader */
 .loaded .main-wrapper { visibility: hidden; }
 
 .icon-load { background: url(../img/loader.gif) no-repeat left top; width: 40px; height: 40px; position: fixed; left: 50%; top: 50%; margin-left: -20px; margin-left: -20px; display: none; }
@@ -255,7 +252,7 @@ footer { height: 120px; background-color: #232323; }
 
 .block-title .title { text-align: center; font-family: Supermolot; color: #454545; letter-spacing: 0.07em; font-size: 36px; font-weight: 700; line-height: 14px; text-transform: uppercase; margin: 0 auto; padding-bottom: 17px; }
 
-.block-title .line { background-color: #b61e24; height: 4px; width: 325px; margin: 0 auto; border-radius: 4px; }
+.block-title .line { background-color: #b61e24; height: 4px; max-width: 325px; margin: 0 auto; border-radius: 4px; }
 
 .subtitle { text-align: center; font-family: Supermolot; color: #454545; font-size: 21px; font-weight: 400; line-height: 14px; padding-top: 11px; padding-bottom: 44px; letter-spacing: 0.05em; }
 
@@ -321,16 +318,10 @@ footer { height: 120px; background-color: #232323; }
   .content-c img { position: static; }
   .content-c .info { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: static; margin: 25px auto; }
   .content-c .search { position: static; margin: 0 auto; -webkit-transform: none; -ms-transform: none; transform: none; }
-  .content-c .jeep, .content-c .shevy, .content-c .wolk, .content-c .lambo { display: block; position: static; margin: 0 auto; }
+  .content-c .jeep, .content-c .shevy, .content-c .wolk, .content-c .lambo { display: block; position: static; margin: 0 auto; padding: 20px; }
   .content-c .pointer { display: block; position: static; margin: 20px auto; -webkit-transform: none; -ms-transform: none; transform: none; text-align: center; max-width: 180px; }
   .content-c .pointer img { margin: 10px 0 0 0; }
   .content-c .pointer p { text-align: center; } }
-
-@media screen and (max-width: 789px) { .content-c .search { width: 90%; }
-  .content-c .search form { width: 80%; }
-  .content-c .search form button img { margin-left: 5px; } }
-
-* { box-sizing: border-box; }
 
 .slide { display: none; }
 
@@ -361,5 +352,10 @@ footer { height: 120px; background-color: #232323; }
 
 @keyframes fade { from { opacity: .4; }
   to { opacity: 1; } }
+
+@media screen and (max-width: 789px) { .content-c .search { width: 90%; }
+  .content-c .search input { min-width: 100px; }
+  .content-c .search form { width: 80%; }
+  .content-c .search form button img { margin-left: 5px; } }
 
 /*# sourceMappingURL=style.css.map */
